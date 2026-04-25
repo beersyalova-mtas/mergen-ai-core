@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERGEN ULTIMATE | Sistem Özellikleri ve Kılavuz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #09090b; --panel: rgba(24, 24, 27, 0.7); --text-main: #f4f4f5; --text-muted: #a1a1aa;
+            --accent: #10b981; --purple: #8b5cf6; --border: rgba(39, 39, 42, 0.8);
+        }
+        body {
+            font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text-main);
+            margin: 0; padding: 40px 20px; line-height: 1.6;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(139, 92, 246, 0.08), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(16, 185, 129, 0.08), transparent 25%);
+            background-attachment: fixed;
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        
+        .header { text-align: center; margin-bottom: 50px; position: relative; }
+        .date-badge { display: inline-block; background: rgba(16, 185, 129, 0.1); color: var(--accent); padding: 8px 20px; border-radius: 30px; border: 1px solid rgba(16, 185, 129, 0.3); font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; margin-bottom: 20px; box-shadow: 0 0 15px rgba(16, 185, 129, 0.2); }
+        h1 { font-size: 46px; font-weight: 900; margin: 0; letter-spacing: -1px; text-shadow: 0 0 20px rgba(139, 92, 246, 0.4); }
+        .h1-highlight { color: var(--purple); }
+        .subtitle { color: var(--text-muted); font-size: 18px; font-weight: 300; margin-top: 10px; }
+
+        .section { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 35px; margin-bottom: 30px; backdrop-filter: blur(12px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .section-title { font-size: 22px; font-weight: 800; color: var(--text-main); margin-top: 0; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--border); padding-bottom: 15px;}
+        
+        .mythology-box { border-left: 4px solid var(--purple); background: linear-gradient(90deg, rgba(139,92,246,0.1) 0%, transparent 100%); padding: 20px 25px; border-radius: 0 12px 12px 0; margin-bottom: 10px; }
+        .mythology-box h3 { color: var(--purple); margin: 0 0 10px 0; font-size: 18px;}
+        .mythology-box p { margin: 0; font-size: 15px; color: #d4d4d8; font-style: italic; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: rgba(9, 9, 11, 0.6); border: 1px solid var(--border); border-radius: 12px; padding: 20px; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 5px 20px rgba(16, 185, 129, 0.15); background: rgba(16, 185, 129, 0.03); }
+        .card-icon { font-size: 28px; margin-bottom: 15px; display: inline-block; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 10px; }
+        .card-title { font-size: 16px; font-weight: 700; color: var(--accent); margin: 0 0 10px 0; font-family: 'JetBrains Mono', monospace;}
+        .card-text { font-size: 14px; color: var(--text-muted); margin: 0; }
+
+        .logic-step { border-bottom: 1px solid var(--border); padding: 15px 0; }
+        .logic-step:last-child { border-bottom: none; }
+        .step-num { color: var(--purple); font-weight: 900; font-family: 'JetBrains Mono', monospace; margin-right: 10px; }
+
+        .guide-box { background: rgba(0,0,0,0.3); border: 1px dashed var(--border); padding: 20px; border-radius: 12px; margin-bottom: 15px;}
+        .guide-box h4 { margin: 0 0 10px 0; color: #fff; font-size: 15px;}
+        .cmd-line { background: #000; color: var(--accent); padding: 10px 15px; border-radius: 6px; font-family: 'JetBrains Mono', monospace; font-size: 13px; border: 1px solid rgba(16,185,129,0.3); margin-bottom: 10px;}
+        .cmd-response { background: rgba(39, 39, 42, 0.5); color: #d4d4d8; padding: 10px 15px; border-radius: 6px; font-family: 'JetBrains Mono', monospace; font-size: 13px; border-left: 2px solid var(--purple);}
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--purple); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="date-badge">⏱️ 24 Nisan 2026 İtibarıyla Güncel Sistem Raporu</div>
+        <h1>MERGEN <span class="h1-highlight">ULTIMATE</span></h1>
+        <div class="subtitle"> Otonom Yapay Zeka (512 nöron - 3 katman llm proje model)  ve Dijital Asistanı</div>
+    </div>
+
+    <div class="section">
+        <div class="mythology-box">
+            <h3>🏹 Mergen Core İsmi Nereden Geliyor?</h3>
+            <p>"Kadim Türk Mitolojisinde 'Mergen', aklın, bilgeliğin ve her şeyi bilmenin tanrısıdır. Kelime anlamı olarak 'Okçu' veya 'Hedefini Asla Şaşırmayan' demektir. Karargahın bu devasa yapay zekasına Mergen adının verilmesinin sebebi; dijital evrenin bilgeliğini  saniyeler içinde sunmaya çalışmasıdır. ( daha bebek:) )"</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">🧠 Sol Beyin Mantık Mimarisi (MİB Protokolü)</h2>
+        <p class="card-text" style="margin-bottom: 20px;">Mergen Ultimate, sadece bir dil modeli değildir; o arkada çalışan devasa bir "Orkestra Şefi" tarafından yönetilen bir ajanlar ağıdır. Mantık sistemimiz şu 3 aşamalı siber tünelden geçer:</p>
+        
+        <div class="logic-step">
+            <span class="step-num">01.</span> <strong>Niyet Analizi & Siber Yönlendirme:</strong> Orkestra Şefi, kullanıcının cümlesindeki linkleri (http), matematiksel sembolleri (%, *, -) veya bağlamsal zamirleri (bunun, onu) saniyeler içinde analiz eder.
+        </div>
+        <div class="logic-step">
+            <span class="step-num">02.</span> <strong>Uzman Ajan Devrelemesi:</strong> Soru türüne göre Sağ Beyin (pth) beklemeye alınır ve doğru Python Ajanı (URL Okuyucu, Çevirici, Matematik Motoru vb.) devreye girip kesin sonuç üretir.
+        </div>
+        <div class="logic-step">
+            <span class="step-num">03.</span> <strong>Nöral Enjeksiyon (Vitrin):</strong> Ajanlardan gelen ham veri, Sağ beyin tarafından "İnsanî bir üslup" ile sarmalanır ve ses motoruyla size okunur.
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">⚡ Siber Yetenekler ve Ajanlar</h2>
+        <div class="grid">
+            <div class="card" style="border-color: rgba(139, 92, 246, 0.5);">
+                <div class="card-icon">♻️</div>
+                <h3 class="card-title" style="color: var(--purple);">RLHF & Otonom Öğrenme</h3>
+                <p class="card-text">Mergen statik değildir. Verdiğiniz cevaplara "Aferin, harika" derseniz puanı (+2) artar ve gece vardiyasında bunu kendi Nöral Ağına ve SQL Veritabanına mühürler.</p>
+            </div>
+            <div class="card" style="border-color: rgba(139, 92, 246, 0.5);">
+                <div class="card-icon">🕸️</div>
+                <h3 class="card-title" style="color: var(--purple);">Siber Ağ Okuyucu (URL)</h3>
+                <p class="card-text">"Şu haberi özetle" diyerek bir link (http) attığınızda, siteye sızar, reklamları temizler ve devasa makalelerin saf özetini vitrine koyar.</p>
+            </div>
+            <div class="card" style="border-color: rgba(139, 92, 246, 0.5);">
+                <div class="card-icon">🎙️</div>
+                <h3 class="card-title" style="color: var(--purple);">Siber Kulak ve Ses (Jarvis)</h3>
+                <p class="card-text">Sizi OpenAI Whisper altyapısıyla dinler. Verdiği tüm çıktıları Türkçe ses sentezleyicisiyle size okur. Konuşmasını anında susturabilirsiniz.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🧮</div>
+                <h3 class="card-title">Hassas Matematik Motoru</h3>
+                <p class="card-text">Dönüm/metrekare çevirileri, yüzde hesaplamaları ve cebirsel işlemler. Halüsinasyon görmeyen kesin siber sonuçlar.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🎭</div>
+                <h3 class="card-title">Siber Empati & Persona</h3>
+                <p class="card-text">Ruh halinizi analiz eden 512 nöronlu LSTM ağları. Yorgun olduğunuzda motivasyon veren, asil bir yaver karakteri.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🌍</div>
+                <h3 class="card-title">Siber İsviçre Çakısı</h3>
+                <p class="card-text">Anlık Hava Durumu, Çevirmen (10+ Dil), Döviz Kurları, Kripto (BTC, SOL), Haber Ajansı ve Uzay İstasyonu (ISS) radarı.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">👁️</div>
+                <h3 class="card-title">Biyometrik Vizyon Sensörü</h3>
+                <p class="card-text">Kameranızı kullanarak ortamdaki yüzleri sayar (OpenCV), nesneleri tanır (MobileNetV2) ve metinleri okur (Tesseract OCR).</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🌐</div>
+                <h3 class="card-title">Siber Eller (Uygulama Kontrol)</h3>
+                <p class="card-text">"Google aç", "YouTube başlat", "Spotify aç" gibi komutlarla tarayıcınızın derinliklerine sızıp cihazınızı yönetir.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📚</div>
+                <h3 class="card-title">RAG & Wikipedia Entegrasyonu</h3>
+                <p class="card-text">Soru eklerini ayıklayan cımbız mimarisiyle, önce Karargah SQL veritabanına, bulamazsa Wikipedia'ya saniyeler içinde sızar.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">📖 Kullanıcı Rehberi (Mergen İle Nasıl Konuşulur?)</h2>
+        
+        <div class="guide-box">
+            <h4>1. Otonom Öğrenme (RLHF - Geri Bildirim)</h4>
+            <p class="card-text" style="margin-bottom:10px;">Mergen'in cevaplarını ödüllendirebilir veya cezalandırabilirsiniz. O bunları unutmaz.</p>
+            <div class="cmd-line">👤 İnsan: Aferin Mergen, harika bir cevaptı bu.</div>
+            <div class="cmd-response">🤖 Mergen: [SİBER ÖĞRENME] Geri bildiriminiz pozitif (+2). Bu başarılı diyaloğu otonom eğitim için Kaliteli Tecrübeler dosyasına mühürledim!</div>
+            <div class="cmd-line" style="margin-top:10px;">👤 İnsan: Saçma sapan konuştun, bu yanlış.</div>
+            <div class="cmd-response">🤖 Mergen: [SİBER KARANTİNA] Geri bildirim negatif (-2). Bu veriyi doğrularından ayırmak için karantinaya alıyorum.</div>
+        </div>
+
+        <div class="guide-box">
+            <h4>2. Siber Ağ Okuyucu (URL Özetleme)</h4>
+            <p class="card-text" style="margin-bottom:10px;">Uzun makaleleri veya haberleri okumakla vakit kaybetmeyin, linki atın.</p>
+            <div class="cmd-line">👤 İnsan: Mergen şunu özetler misin? https://www.sozcu.com.tr/ornek-haber</div>
+            <div class="cmd-response">🤖 Mergen: İlettiğiniz bağlantıya siber ağlar üzerinden sızdım. Sayfayı analiz ettim, işte kısa özeti: [Makalenin Özeti]</div>
+        </div>
+
+        <div class="guide-box">
+            <h4>3. Akıllı Bağlam Kullanımı (Kısa Süreli Bellek)</h4>
+            <p class="card-text" style="margin-bottom:10px;">Mergen son rakamları ve konuları aklında tutar.</p>
+            <div class="cmd-line">👤 İnsan: 200 litre zeytinyağı kaç kilo eder?</div>
+            <div class="cmd-response">🤖 Mergen: Ortalama 183.2 kilogramdır.</div>
+            <div class="cmd-line" style="margin-top:10px;">👤 İnsan: Peki bunun %20'si ne kadar eder?</div>
+            <div class="cmd-response">🤖 Mergen: 36.64 eder. (Önceki 183.2 rakamını hatırlar)</div>
+        </div>
+
+        <div class="guide-box">
+            <h4>4. Bilgisayara Hükmetme ve Sensörler</h4>
+            <p class="card-text" style="margin-bottom:10px;">Sensör butonlarını (👁️, 📖, 🔍, 🎤) kullanarak dünyayı Mergen'e açabilir veya komut verebilirsiniz.</p>
+            <div class="cmd-line">👤 İnsan: Mergen bana YouTube aç.</div>
+            <div class="cmd-response">🤖 Mergen: [EYLEM: YOUTUBE_AC] Cihazınızda YouTube paneline bağlanılıyor...</div>
+            <div class="cmd-line" style="margin-top:10px;">🔘 Sensör Butonu: 🔍 (Nesne Tanı) Butonuna Basıldığında...</div>
+            <div class="cmd-response">🤖 Mergen: [NESNE TARAMASI] Siber optik ağlarımı odakladım. Karşımda %89 doğrulukla bir 'Klavye' görüyorum.</div>
+        </div>
+    </div>
+
+    <div style="text-align: center; color: var(--text-muted); font-size: 12px; margin-top: 20px;">
+        Designed and Developed by <strong>Mehmettas</strong> |  Core V6.5 Ultimate - beersyalova@gmail.com
+    </div>
+</div>
+
+</body>
+</html>
